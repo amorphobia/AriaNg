@@ -29,6 +29,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: check
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
       - name: Download AriaNg ${{ needs.check.outputs.tag }}
         uses: robinraju/release-downloader@v1.7
         with:
